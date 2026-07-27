@@ -54,6 +54,8 @@ def load_candidate_registry(path: Path) -> pd.DataFrame:
         "casrn",
         "candidate_class",
         "role",
+        "usgs_parent_label",
+        "usgs_product_label",
         "source_url",
         "retrieval_date",
         "identity_note",
@@ -69,4 +71,3 @@ def load_candidate_registry(path: Path) -> pd.DataFrame:
             f"Expected 21 official DTSC candidates, found {official_count}"
         )
     return frame
-

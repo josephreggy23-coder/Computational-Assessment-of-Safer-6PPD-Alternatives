@@ -2,7 +2,12 @@ from pathlib import Path
 
 import pandas as pd
 
-from sixppd_assessment.analysis import summarize_invivo_mortality
+from sixppd_assessment.analysis import (
+    build_decision_priorities,
+    build_evidence_matrix,
+    compare_published_cell_endpoints,
+    summarize_invivo_mortality,
+)
 from sixppd_assessment.io import (
     load_candidate_registry,
     load_sources,
@@ -44,6 +49,13 @@ def test_report_endpoint_table_contains_only_published_rows() -> None:
         "7PPDQ": 490.73,
         "IPPDQ": 408.01,
     }
+    comparison = compare_published_cell_endpoints(endpoints)
+    ratios = comparison.loc[
+        comparison["endpoint"].eq("EC20")
+    ].set_index("chemical")["concentration_ratio_vs_6ppdq"]
+    assert ratios["6PPDQ"] == 1.0
+    assert round(ratios["7PPDQ"], 1) == 112.0
+    assert round(ratios["IPPDQ"], 1) == 93.2
 
 
 def test_mortality_summary_preserves_observed_fish_total() -> None:
@@ -59,3 +71,21 @@ def test_mortality_summary_preserves_observed_fish_total() -> None:
         "IPPDQ",
         "OPPDQ",
     }
+
+
+def test_each_candidate_receives_a_next_decisive_test() -> None:
+    registry = load_candidate_registry(
+        ROOT / "data" / "reference" / "candidate_registry.csv"
+    )
+    invivo = pd.read_csv(ROOT / "data" / "raw" / "usgs" / "invivo_data.csv")
+    invitro = pd.read_csv(ROOT / "data" / "raw" / "usgs" / "invitro_data.csv")
+    pubchem = pd.read_csv(
+        ROOT / "data" / "processed" / "pubchem_identities.csv"
+    )
+    matrix = build_evidence_matrix(registry, invivo, invitro, pubchem)
+    priorities = build_decision_priorities(matrix)
+    assert len(priorities) == len(registry)
+    assert priorities["next_decisive_test"].notna().all()
+    dtpd = priorities.loc[priorities["short_name"].eq("DTPD/DPPD")].iloc[0]
+    assert not dtpd["has_discrete_identity"]
+    assert "Resolve composition" in dtpd["next_decisive_test"]

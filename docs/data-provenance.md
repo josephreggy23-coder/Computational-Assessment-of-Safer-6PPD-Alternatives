@@ -16,6 +16,11 @@ License: CC0-1.0 public-domain dedication.
 | `invitro_data.csv` | 6,244 | `d25a1bef7229d2a18ac5af33ab7ffb21` |
 
 The repository download script verifies these hashes before analysis.
+The accompanying `metadata.xml` is also preserved and verified against its
+published MD5, `3782097fca192ee32f24fbc806c75013`.
+
+The metadata defines both nominal and measured in-vivo concentrations as
+micrograms per liter and states that mortality was monitored for 24 hours.
 
 ## USGS/Washington report
 

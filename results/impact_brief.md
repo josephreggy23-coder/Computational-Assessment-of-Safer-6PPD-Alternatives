@@ -14,6 +14,10 @@ The in-vivo file contains observations covering **6 chemical labels**, **1006 fi
 
 The cell-line and whole-fish evidence are kept separate because they are not interchangeable endpoints.
 
+## Measured benchmark comparison
+
+In published coho CSE-119 cell results at EC20, IPPDQ required 93.2x the 6PPDQ concentration; 7PPDQ required 112.0x the 6PPDQ concentration. This indicates lower potency in that assay, not proof of ecological safety.
+
 ## Highest-impact next experiment
 
 For each candidate with a defined identity, identify its actual ozonation products and test the complete product mixture in a sensitive salmonid system. Parent-only testing is insufficient: the USGS report found that ozonated mixtures could be more biologically active than purified quinones.

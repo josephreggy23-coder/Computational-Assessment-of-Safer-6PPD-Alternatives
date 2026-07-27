@@ -9,6 +9,11 @@
       "url": "https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf",
       "sha256": "102f032f3722f8c06f1cf91cce319f69d2c7128c29d7d936de62d51d11acb933"
     },
+    "metadata": {
+      "filename": "metadata.xml",
+      "url": "https://www.sciencebase.gov/catalog/file/get/687eb5ecd4be027f6b8e0f44?f=__disk__10%2F4e%2F79%2F104e79d04d285f04d2caa3005688dbafc7c66501",
+      "md5": "3782097fca192ee32f24fbc806c75013"
+    },
     "files": {
       "invivo_data.csv": {
         "url": "https://www.sciencebase.gov/catalog/file/get/687eb5ecd4be027f6b8e0f44?f=__disk__a9%2Fc0%2F2e%2Fa9c02e5d0cc03fd0c3ada63d10400519e824b962",

@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Record created using version 2.1.1 of the USGS Metadata Wizard tool. (https://github.com/DOI-USGS/fort-pymdwizard)-->
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Justin B. Greer</origin>
+        <origin>Ellie M. Dalsky</origin>
+        <origin>Paxton Bachand</origin>
+        <origin>John D. Hansen</origin>
+        <pubdate>20250624</pubdate>
+        <title>Toxicity of 6PPD alternatives to salmonids</title>
+        <geoform>spreadsheet</geoform>
+        <onlink>https://doi.org/10.5066/P1DHCMMZ</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>J.B. Greer</origin>
+            <origin>E.M. Dalsky</origin>
+            <origin>P. Bachand</origin>
+            <origin>J.D. Hansen</origin>
+            <pubdate>20211129</pubdate>
+            <title>Toxicity of 6PPD alternatives to salmonid cell lines</title>
+            <geoform>publication</geoform>
+            <othercit>Greer, J.B., E.M. Dalsky, P. Bachand, and J.D. Hansen. 2026. Toxicity of 6PPD alternatives to salmonid cell lines. WA Department of Ecology. IAA No. C2400057. https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/6PPD%20Alternatives%20Technical%20Memo.pdf</othercit>
+            <onlink>https://gcc02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.ezview.wa.gov%2FPortals%2F_1962%2FDocuments%2F6ppd%2F6PPD%2520Alternatives%2520Technical%2520Memo.pdf&amp;data=05%7C02%7Csciencebase_datarelease%40usgs.gov%7C0958d5a471674364be0808de64322ddb%7C0693b5ba4b184d7b9341f32f400a5494%7C0%7C0%7C639058363830647364%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=e8XUShPljGWZZw4y2g2KRyKDl35VxBuaz4PgbAchFNE%3D&amp;reserved=0</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Pollutants present in stormwater runoff can severely degrade water quality in aquatic habitats. The tire-derived chemical 6PPD-quinone is one such pollutant present in stormwater that is known to significantly impact the survival of salmonids. 6PPD-quinone is derived from 6PPD, the primary antiozonant used to protect tire rubber from ozone attack and degradation. Alternative antiozonants to replace 6PPD are currently being considered for automobile tires. In addition to acceptable tire performance the feasibility of any such replacement depends on minimizing environmental impacts. This data examines the toxicity of proposed alternative antiozonants using in vivo exposures and in vitro cell lines derived from coho salmon, Chinook salmon, and rainbow trout. Ozonated product mixtures and purified quinone transformation products derived from select antiozonants was also performed.</abstract>
+      <purpose>These data were collected to provide cell line and in vivo assessments for the toxicity of 6PPD replacement chemicals and their ozonated transformation products in several salmonids. The data should be used as an initial data to assess tire rubber antiozonants for their toxicity to salmonids.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20240215</begdate>
+          <enddate>20250521</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>observed</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <descgeog>Washington</descgeog>
+      <bounding>
+        <westbc>-124.7600</westbc>
+        <eastbc>-116.9100</eastbc>
+        <northbc>49.0000</northbc>
+        <southbc>45.5400</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>environment</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>ecotoxicology</themekey>
+        <themekey>runoff</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:687eb5ecd4be027f6b8e0f44</themekey>
+      </theme>
+    </keywords>
+    <taxonomy>
+      <keywtax>
+        <taxonkt>None</taxonkt>
+        <taxonkey>Oncornchus</taxonkey>
+      </keywtax>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Actinopterygii</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Teleostei</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Superorder</taxonrn>
+                        <taxonrv>Protacanthopterygii</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Order</taxonrn>
+                          <taxonrv>Salmoniformes</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Family</taxonrn>
+                            <taxonrv>Salmonidae</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Subfamily</taxonrn>
+                              <taxonrv>Salmoninae</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Genus</taxonrn>
+                                <taxonrv>Oncorhynchus</taxonrv>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+    </taxonomy>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the dataset's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Justin B Greer</cntper>
+          <cntorg>U.S. Geological Survey, NW-PACIFIC ISLAND REG</cntorg>
+        </cntperp>
+        <cntpos>COMPUTATIONAL BIOLOGIST</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>6505 NE 65th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>206-526-2055</cntvoice>
+        <cntfax>206-526-6654</cntfax>
+        <cntemail>jgreer@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Funding support for this project was provided by the Washington Department of Ecology</datacred>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>All data have been cross-checked and are accurate. Water chemistry analysis was performed on a subset of the in vivo exposures to ensure accuracy of the dosing concentrations.</attraccr>
+    </attracc>
+    <logic>All data have been checked for duplication and omission and none were found.</logic>
+    <complete>Dataset is considered complete for the information presented, as described in the abstract. Users are advised to read the metadata carefully for additional details.</complete>
+    <lineage>
+      <procstep>
+        <procdesc>Gas-phase ozonation was performed on two PPDs (7PPD, IPPD) to generate transformation product mixtures. 6PPD was ozonated as a positive control to provide a basis for comparing the toxicity of 7PPD and IPPD to their ozonated mixtures. Before ozonation, parent compounds were dissolved in methanol and applied to 8” x 8” glass plates using a gas-tight syringe at 100 μg PPD/cm2. After the chemicals were applied, the plates were allowed to dry under a fume hood until the methanol was evaporated. Once dry, the plates were placed in a glass chamber receiving 0.5 L/min of positive pressure compressed air containing 50 ppmv ozone. Ozone concentrations entering and exiting the glass chamber were continuously monitored using a UV/Vis spectrophotometer.
+
+Ozonation was considered complete after ozone consumption by the PPD mass on the plates had effectively ceased. Following complete ozonation the plates were removed from the chamber and eluted using absolute ethanol. The eluent was transferred into pre-weighed amber glass bottles and purged with N2 before storage at -20 degrees Celsius.For each ozonation experiment, one control plate with the same mass of PPD applied was placed in a vacuum chamber with compressed air for the duration of the ozonation process and eluted at he end of the experiment. The control and ozonated eluents were analyzed using targeted mass spectrometry to quantify the masses of the unreacted parent compounds and quinone transformation product. The ozonation of IPPD was performed twice due to rapid reaction rates. During the first ozonation, ozone reaction ceased at 5 hours, but the plate was ozonated for 24 hours to align with the ozonation times of 6PPD and 7PPD. Higher purity IPPD (TCI, 97.2% purity) was used for the second ozonation. The reaction again ceased early (6 hours), and the experiment was stopped.</procdesc>
+        <procdate>20250529</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>The alamarBlue cell viability kit (Invitrogen) was used to quantify cellular metabolism. Briefly, CSE-119, CHSE-214, and RTG-2 cells were seeded in 96-well plates at a density of 10,000 cells per well in 100 µL of media and allowed to adhere for 24 hours. Stock solutions for parental antiozonants and purified quinone transformation product were serial diluted to 2X the desired final concentrations and added in 100 µL increments to each well to create the nominal concentrations of 0.1 - 200 µg/L, with at a minimum of 8 concentrations tested per cell line. Each chemical was dissolved overnight in absolute ethanol immediately prior to exposure. Transformation product mixtures for 7PPD, IPPD, and 6PPD were applied up to a maximum concentration of 200 micrograms per liter of the parent PPD.  
+
+Cell media containing the same percentage of ethanol as the highest chemical concentration (0.0067%) served as a solvent control. Each plate contained 4 replicates per concentration per cell type. Following chemical addition, the alamarBlue cell viability reagent was added to each well at 10% of the well volume in a dark room per the manufacture’s protocol. Fluorescence was measured at an excitation of 550 nm and emission of 600 nm with a gain of 70 using the Tecan Magellan Pro Infinite M Plex plate reader at the 0-, 6-, and 24-hour timepoints (+-10 min). Plates were kept covered with foil in a 20℃ incubator between measurements. Relative metabolism compared to solvent controls was calculated using measured fluorescence at 24 h compared to solvent controls from the same experiment at 6 h post-exposure.</procdesc>
+        <procdate>20240520</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>The toxicity of the quinone transformation products of commercially available PPD alternatives was assessed in juvenile coho salmon (O. kisutch) (mass: 0.86 +- 0.02 g (mean +- standard error of mean)) obtained from the Issaquah salmon hatchery (Issaquah, WA). Fish were exposed in 8L of water inside of a 9L glass aquaria and supplied with constant aeration via air stone. Tanks were set on a water table with flowing water surrounding the tanks to ensure a constant temperature of 8 degrees Celsius (+- 0.5C). Fish were placed in 6L of water in the aquaria and allowed to acclimate for at least 1 h prior to the start of exposure. To ensure rapid mixing during exposure, 1L of fresh water was vigorously poured into each tank while 1 L of the appropriate chemical stock solution was added. Mortalities were then monitored for 24 h. No mortality was observed in any control treatments. A total of 8 fish were included in each replicate tank, with three replicate tanks per treatment.</procdesc>
+        <procdate>20250520</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>all_data.xls (in_vivo)</enttypl>
+        <enttypd>Excel Worksheet</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+  <attrlabl>species</attrlabl><attrdef>Species tested for in vivo acute toxicity.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>coho</edomv>
+      <edomvd>coho salmon (O. kisutch)</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+  <attrlabl>fish_hatch_date</attrlabl><attrdef>Date of hatching for the coho salmon used for studies in the format yyyy-mm-dd.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>2024-12-25</edomv>
+      <edomvd>December 25, 2024</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+  <attrlabl>exposure_chemical</attrlabl><attrdef>Identifies the chemical the fish was exposed to.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>IPPDQ</edomv>
+      <edomvd>2-[(1-methylethyl)amino]-5-(phenylamino)-2,5-cyclohexadiene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>DPPDQ</edomv>
+      <edomvd>2,5-bis(phenylamino)-2,5-cyclohexadiene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>CCPDQ</edomv>
+      <edomvd>N,N’-Dicyclohexyl-4-phenylenediamine-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>OPPDQ</edomv>
+      <edomvd>2-(octylamino)-5-(phenylamino)-2,5-cyclohexadiene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>HPPDQ</edomv>
+      <edomvd>2-(hexylamino)-5-(phenylamino)cyclohexa-2,5-diene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>CPPDQ</edomv>
+      <edomvd>2-(cyclohexylamino)-5-(phenylamino)-2,5-cyclohexadiene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+        <attrlabl>exposure_start</attrlabl>
+        <attrdef>Date and time when the exposure began, in the format yyyy-mm-dd hh:mm.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>2025-05-06 10:00</rdommin>
+            <rdommax>2025-05-21 09:40</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>tank_replicate</attrlabl>
+        <attrdef>Replicate tank number. Triplicate tanks were performed for each concentration and chemical.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>1</rdommin>
+            <rdommax>3</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>fish_id</attrlabl>
+        <attrdef>Arbitrary replicate number for the individual within the tank.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>1</rdommin>
+            <rdommax>8</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>nominal_conc</attrlabl>
+        <attrdef>Nominal concentration of chemical administered in micrograms per liter.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>50.0</rdommax>
+            <attrunit>micrograms per liter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>time_of_death</attrlabl>
+        <attrdef>Describes the time and date the animal was discovered dead during the exposure in the format yyyy-mm-dd hh:mm.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+  <edomv>NA</edomv>
+  <edomvd>No mortality was observed</edomvd>
+  <edomvds>Producer defined</edomvds>
+</edom>
+        </attrdomv>
+        <attrdomv><udom>Date and time for observed mortalities. NA represents animals that survived to the end of the 24 h exposure.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>mass_g</attrlabl>
+        <attrdef>Mass in grams for a subset of individuals.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+  <edomv>NA</edomv>
+  <edomvd>Mass was not measured</edomvd>
+  <edomvds>Producer defined</edomvds>
+</edom>
+        </attrdomv>
+        <attrdomv><rdom>
+            <rdommin>0.49</rdommin>
+            <rdommax>1.72</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>length_cm</attrlabl>
+        <attrdef>Length of the individual, only measured for a subset.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+  <edomv>NA</edomv>
+  <edomvd>Length was not measured.</edomvd>
+  <edomvds>Producer defined</edomvds>
+</edom>
+        </attrdomv>
+        <attrdomv><rdom>
+            <rdommin>3.9</rdommin>
+            <rdommax>5.6</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>mortality</attrlabl><attrdef>Describes if the animals survived (0) or died (1) during the exposure.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>0</edomv>
+      <edomvd>Animal survived until the end of the 24 h exposure.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>1</edomv>
+      <edomvd>Animal died during the 24 h exposure.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+        <attrlabl>measured_conc</attrlabl>
+        <attrdef>Measured concentration of the chemical, in micrograms per liter.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+  <edomv>NA</edomv>
+  <edomvd>actual concentration was not measured</edomvd>
+  <edomvds>Producer defined</edomvds>
+</edom>
+        </attrdomv>
+        <attrdomv><rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>274.486</rdommax>
+            <attrunit>micrograms per liter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>flags</attrlabl><attrdef>Special notations concerning measured conccentrations.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv><edom>
+  <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+  <edomvd>No notes for this measurement.</edomvd>
+  <edomvds>Producer defined</edomvds>
+</edom></attrdomv><attrdomv>
+    <edom>
+      <edomv>&lt;LOD</edomv>
+      <edomvd>Concentration was below the limit of detection</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>E</edomv>
+      <edomvd>Concentration fell outside of the linear calibration curve and is therefore an estimate.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>all_data.xls (in_vitro)</enttypl>
+        <enttypd>Excel Worksheet</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>well_positions</attrlabl>
+        <attrdef>Well ID on the 96-well plate</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Describes the row and column of the well in a 96-well plate</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>concentration</attrlabl>
+        <attrdef>concentration of chemical applied to the cells, in micrograms per liter</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>400.0</rdommax>
+            <attrunit>micrograms per liter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>cell_type</attrlabl><attrdef>Type of cells tested</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>CSE</edomv>
+      <edomvd>CSE-119 coho salmon cells</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>CHSE</edomv>
+      <edomvd>CHSE-214 Chinook salmon cells</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>RTG</edomv>
+      <edomvd>RTG-2 rainbow trout cells</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+        <attrlabl>rfu</attrlabl>
+        <attrdef>Relative fluorescence units</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>4282</rdommin>
+            <rdommax>53582</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>antiozonant</attrlabl><attrdef>Chemical tested.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>6PPD</edomv>
+      <edomvd>N-(1,3-Dimethylbutyl)-N′-phenyl-p-phenylenediamine</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>6PPDQ</edomv>
+      <edomvd>(+)-2-[(1,3-dimethylbutyl)amino]-5-(phenylamino)-2,5-cyclohexadiene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>77PD</edomv>
+      <edomvd>N,N’-bis(1,4-dimethylpentyl)-p-Phenylenediamine</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>77PDQ</edomv>
+      <edomvd>N,N’-bis(1,4-dimethylpentyl)-p-Phenylenediamine-quinone</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>7PPD</edomv>
+      <edomvd>N1-(1,4-dimethylpentyl)-N4-phenyl-1,4-benzenediamine</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>7PPDQ</edomv>
+      <edomvd>2-[(1,4-dimethylpentyl)amino]-5-(phenylamino)-2,5-cyclohexadiene-1,4-dione</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>CCPD</edomv>
+      <edomvd>N,N′-Dicyclohexyl-p-phenylenediamine</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>CCPDQ</edomv>
+      <edomvd>N,N′-Dicyclohexyl-p-phenylenediamine-quinone</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>DPPD</edomv>
+      <edomvd>N,N′-Diphenyl-1,4-phenylenediamine</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>DPPDQ</edomv>
+      <edomvd>N,N′-Diphenyl-1,4-phenylenediamine-quinone</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>IPPD</edomv>
+      <edomvd>N-Isopropyl-N'-phenyl-p-phenylenediamine</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>IPPDQ</edomv>
+      <edomvd>N-Isopropyl-N'-phenyl-p-phenylenediamine-quinone</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+  <attrlabl>plate</attrlabl><attrdef>Replicate plate number.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>Plate1</edomv>
+      <edomvd>First plate.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Plate2</edomv>
+      <edomvd>Second plate</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Plate3</edomv>
+      <edomvd>Third plate</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Plate4</edomv>
+      <edomvd>Fourth plate</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Plate5</edomv>
+      <edomvd>Fifth plate</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Plate6</edomv>
+      <edomvd>Sixth plate</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+        <attrlabl>time</attrlabl>
+        <attrdef>Date and time the measurement took place, in the format yyyy-mm-dd hh-mm-ss</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>2024-02-15 10:46:33</rdommin>
+            <rdommax>2025-01-16 11:24:13</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>timepoint</attrlabl>
+        <attrdef>Time (in minutes) since the start of exposure to when the measurement was taken.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv><rdom>
+            <rdommin>1072</rdommin>
+            <rdommax>1457</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>ozone_time</attrlabl><attrdef>Time of ozonation, used during some studies to ozonate parental PPD compounds.</attrdef><attrdefs>Producer Defined</attrdefs><attrdomv><edom>
+  <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+  <edomvd>Product was not ozonated</edomvd>
+  <edomvds>Producer defined</edomvds>
+</edom></attrdomv><attrdomv>
+    <edom>
+      <edomv>t0</edomv>
+      <edomvd>Samples not exposed to ozone, used as a control for the ozonated mixtures.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>t25</edomv>
+      <edomvd>Sample was ozonated for 25 hours to produce transformation product mixtures.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey</cntorg>
+          <cntper>GS ScienceBase</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform><digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt><onlinopt><computer><networka><networkr>https://doi.org/10.5066/P1DHCMMZ</networkr></networka></computer></onlinopt></digtopt></digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20260205</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Justin B Greer</cntper>
+          <cntorg>U.S. Geological Survey, NW-PACIFIC ISLAND REG</cntorg>
+        </cntperp>
+        <cntpos>COMPUTATIONAL BIOLOGIST</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>6505 NE 65th Street</address>
+          <city>Seattle</city>
+          <state>WA</state>
+          <postal>98115</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>206-526-2055</cntvoice>
+        <cntfax>206-526-6654</cntfax>
+        <cntemail>jgreer@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+  </metainfo>
+</metadata>

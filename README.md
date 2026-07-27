@@ -61,8 +61,10 @@ The current pipeline:
 3. summarizes measured in-vivo mortality by chemical and concentration;
 4. maps which official candidates have parent, transformation-product,
    organism, cell-line, and structure evidence;
-5. assigns an **evidence-readiness tier**, not a safety score;
-6. writes an impact brief showing the most consequential evidence gaps.
+5. compares published alternative-quinone cell effects with the 6PPDQ benchmark;
+6. assigns an **evidence-readiness tier**, not a safety score;
+7. names the next decision-changing test for every candidate;
+8. writes an impact brief showing the most consequential evidence gaps.
 
 The pipeline does **not** yet fit a toxicity model. Modeling begins only after
 the endpoint harmonization and sample-size gates in
@@ -84,6 +86,8 @@ The analysis writes:
 - `results/data_inventory.csv`
 - `results/invivo_mortality_summary.csv`
 - `results/evidence_matrix.csv`
+- `results/cell_endpoint_comparison.csv`
+- `results/decision_priorities.csv`
 - `results/impact_brief.md`
 
 ## Repository map
@@ -105,4 +109,3 @@ The analysis writes:
 
 This project prioritizes candidates for further testing. It does not certify a
 chemical as safe or prove that it will perform in a commercial tire.
-

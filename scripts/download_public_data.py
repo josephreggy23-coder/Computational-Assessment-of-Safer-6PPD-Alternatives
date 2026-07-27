@@ -59,6 +59,17 @@ def download_usgs(sources: dict) -> None:
             f"Checksum mismatch for {report['filename']}: "
             f"{observed_sha256} != {report['sha256']}"
         )
+    metadata = sources["usgs_2026"]["metadata"]
+    metadata_path = destination_dir / metadata["filename"]
+    if not metadata_path.exists() or md5sum(metadata_path) != metadata["md5"]:
+        print(f"Downloading {metadata['filename']}")
+        download(metadata["url"], metadata_path)
+    observed_md5 = md5sum(metadata_path)
+    if observed_md5 != metadata["md5"]:
+        raise RuntimeError(
+            f"Checksum mismatch for {metadata['filename']}: "
+            f"{observed_md5} != {metadata['md5']}"
+        )
 
 
 def pubchem_identity(casrn: str, api_base: str) -> dict[str, object]:

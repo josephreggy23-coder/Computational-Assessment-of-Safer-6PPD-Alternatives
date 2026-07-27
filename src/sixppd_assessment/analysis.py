@@ -5,9 +5,6 @@ from __future__ import annotations
 import pandas as pd
 
 
-PARENT_LABELS = {"6PPD", "7PPD", "77PD", "IPPD", "CCPD", "DPPD"}
-
-
 def summarize_invivo_mortality(frame: pd.DataFrame) -> pd.DataFrame:
     """Summarize observed mortality without fitting or imputing a model."""
     fish = frame.loc[frame["fish_id"].notna()].copy()
@@ -40,12 +37,14 @@ def build_evidence_matrix(
     invivo_labels = set(invivo["exposure_chemical"].dropna().astype(str))
     invitro_labels = set(invitro["antiozonant"].dropna().astype(str))
 
-    matrix["has_parent_cell_data"] = matrix["short_name"].isin(invitro_labels)
-    matrix["has_product_cell_data"] = matrix["short_name"].map(
-        lambda value: f"{value}Q" in invitro_labels
+    matrix["has_parent_cell_data"] = matrix["usgs_parent_label"].map(
+        lambda value: pd.notna(value) and str(value) in invitro_labels
     )
-    matrix["has_product_invivo_data"] = matrix["short_name"].map(
-        lambda value: f"{value}Q" in invivo_labels
+    matrix["has_product_cell_data"] = matrix["usgs_product_label"].map(
+        lambda value: pd.notna(value) and str(value) in invitro_labels
+    )
+    matrix["has_product_invivo_data"] = matrix["usgs_product_label"].map(
+        lambda value: pd.notna(value) and str(value) in invivo_labels
     )
     matrix["has_discrete_identity"] = (
         matrix["casrn"].notna()
@@ -93,10 +92,96 @@ def build_evidence_matrix(
     return matrix
 
 
+def compare_published_cell_endpoints(endpoints: pd.DataFrame) -> pd.DataFrame:
+    """Compare published effects with 6PPDQ within the same endpoint and cell line."""
+    required = {
+        "cell_type",
+        "chemical",
+        "endpoint",
+        "effect_concentration_ug_l",
+        "source_url",
+    }
+    missing = required - set(endpoints.columns)
+    if missing:
+        raise ValueError(f"Endpoint table missing columns: {sorted(missing)}")
+
+    benchmark = (
+        endpoints.loc[endpoints["chemical"].eq("6PPDQ")]
+        .set_index(["cell_type", "endpoint"])["effect_concentration_ug_l"]
+        .rename("benchmark_6ppdq_ug_l")
+    )
+    comparison = endpoints.merge(
+        benchmark,
+        left_on=["cell_type", "endpoint"],
+        right_index=True,
+        how="left",
+        validate="many_to_one",
+    )
+    comparison["concentration_ratio_vs_6ppdq"] = (
+        comparison["effect_concentration_ug_l"]
+        / comparison["benchmark_6ppdq_ug_l"]
+    )
+    comparison["interpretation"] = comparison.apply(
+        lambda row: (
+            "6PPDQ benchmark"
+            if row["chemical"] == "6PPDQ"
+            else (
+                f"{row['concentration_ratio_vs_6ppdq']:.1f}x higher "
+                f"concentration than 6PPDQ for the same {row['endpoint']} effect"
+            )
+        ),
+        axis=1,
+    )
+    return comparison
+
+
+def build_decision_priorities(matrix: pd.DataFrame) -> pd.DataFrame:
+    """Name the next decision-changing test without assigning a safety score."""
+
+    def next_test(row: pd.Series) -> str:
+        if not row["has_discrete_identity"]:
+            return "Resolve composition and identity before molecular modeling"
+        if row["has_product_invivo_data"]:
+            return (
+                "Identify and test the complete ozonated mixture against the "
+                "purified product"
+            )
+        if row["has_product_cell_data"]:
+            return (
+                "Run a concentration-confirmed whole-fish salmonid test of the "
+                "transformation product"
+            )
+        if row["has_parent_cell_data"]:
+            return "Identify, quantify, and test ozonation products"
+        return (
+            "Establish comparable parent performance and transformation-product "
+            "toxicity evidence"
+        )
+
+    priorities = matrix.copy()
+    priorities["next_decisive_test"] = priorities.apply(next_test, axis=1)
+    columns = [
+        "candidate_id",
+        "short_name",
+        "candidate_class",
+        "role",
+        "evidence_readiness",
+        "next_decisive_test",
+        "has_discrete_identity",
+        "has_pubchem_structure",
+        "has_parent_cell_data",
+        "has_product_cell_data",
+        "has_product_invivo_data",
+        "source_url",
+    ]
+    return priorities[columns]
+
+
 def build_impact_brief(
     inventory: pd.DataFrame,
     matrix: pd.DataFrame,
     mortality: pd.DataFrame,
+    endpoint_comparison: pd.DataFrame,
 ) -> str:
     official = matrix.loc[matrix["role"].eq("official_candidate")]
     organism_covered = int(official["has_product_invivo_data"].sum())
@@ -116,6 +201,17 @@ def build_impact_brief(
     exposed_chemicals = mortality["exposure_chemical"].nunique()
     deaths = int(mortality["deaths"].sum())
     fish_n = int(mortality["fish_n"].sum())
+    ec20 = endpoint_comparison.loc[
+        endpoint_comparison["endpoint"].eq("EC20")
+        & ~endpoint_comparison["chemical"].eq("6PPDQ")
+    ].sort_values("concentration_ratio_vs_6ppdq")
+    ec20_finding = "; ".join(
+        (
+            f"{row.chemical} required {row.concentration_ratio_vs_6ppdq:.1f}x "
+            "the 6PPDQ concentration"
+        )
+        for row in ec20.itertuples()
+    )
 
     lines = [
         "# Impact brief",
@@ -151,6 +247,14 @@ def build_impact_brief(
         "",
         "The cell-line and whole-fish evidence are kept separate because they are "
         "not interchangeable endpoints.",
+        "",
+        "## Measured benchmark comparison",
+        "",
+        (
+            "In published coho CSE-119 cell results at EC20, "
+            f"{ec20_finding}. This indicates lower potency in that assay, not proof "
+            "of ecological safety."
+        ),
         "",
         "## Highest-impact next experiment",
         "",
