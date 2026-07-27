@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this framework, cite the repository and the original public datasets."
+title: "Computational Assessment of Safer 6PPD Alternatives"
+type: software
+authors:
+  - family-names: "Reggy"
+    given-names: "Joseph"
+version: 0.1.0
+date-released: 2026-07-27
+license: MIT
+repository-code: "https://github.com/josephreggy23-coder/Computational-Assessment-of-Safer-6PPD-Alternatives"
+preferred-citation:
+  type: software
+  title: "Computational Assessment of Safer 6PPD Alternatives"
+  authors:
+    - family-names: "Reggy"
+      given-names: "Joseph"
+  year: 2026
+

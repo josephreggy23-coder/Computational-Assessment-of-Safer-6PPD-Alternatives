@@ -1,0 +1,11 @@
+cell_type,chemical,endpoint,effect_concentration_ug_l,source_document,source_table,source_url
+CSE-119,6PPDQ,EC5,1.33,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,6PPDQ,EC10,2.38,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,6PPDQ,EC20,4.38,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,7PPDQ,EC5,223.38,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,7PPDQ,EC10,315.83,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,7PPDQ,EC20,490.73,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,IPPDQ,EC5,147.85,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,IPPDQ,EC10,194.73,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+CSE-119,IPPDQ,EC20,408.01,Toxicity of 6PPD alternatives to salmonid cell lines,Table 2,https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf
+

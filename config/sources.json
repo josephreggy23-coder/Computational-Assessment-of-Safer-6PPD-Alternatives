@@ -1,0 +1,45 @@
+{
+  "usgs_2026": {
+    "title": "Toxicity of 6PPD alternatives to salmonids",
+    "doi": "https://doi.org/10.5066/P1DHCMMZ",
+    "landing_page": "https://www.sciencebase.gov/catalog/item/687eb5ecd4be027f6b8e0f44",
+    "license": "CC0-1.0",
+    "report": {
+      "filename": "usgs_2026_alternatives_final_report.pdf",
+      "url": "https://www.ezview.wa.gov/Portals/_1962/Documents/6ppd/WDOE%20USGS%20Alts%20Final%20Report%20submitted.pdf",
+      "sha256": "102f032f3722f8c06f1cf91cce319f69d2c7128c29d7d936de62d51d11acb933"
+    },
+    "files": {
+      "invivo_data.csv": {
+        "url": "https://www.sciencebase.gov/catalog/file/get/687eb5ecd4be027f6b8e0f44?f=__disk__a9%2Fc0%2F2e%2Fa9c02e5d0cc03fd0c3ada63d10400519e824b962",
+        "md5": "bcffc127f53bffb32cb91f83b203c152"
+      },
+      "invitro_data.csv": {
+        "url": "https://www.sciencebase.gov/catalog/file/get/687eb5ecd4be027f6b8e0f44?f=__disk__58%2Fc5%2F93%2F58c593e49b7861d9e76f40896933e7e5ed731c7b",
+        "md5": "d25a1bef7229d2a18ac5af33ab7ffb21"
+      }
+    }
+  },
+  "dtsc_candidates": {
+    "title": "Motor Vehicle Tires Containing 6PPD",
+    "url": "https://dtsc.ca.gov/scp/motor_vehicle_tires_containing_6ppd/",
+    "retrieved": "2026-07-27",
+    "license_note": "California government source; preserve attribution."
+  },
+  "pubchem": {
+    "title": "PubChem PUG REST",
+    "url": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+    "api_base": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+    "retrieved": "2026-07-27"
+  },
+  "ecotox": {
+    "title": "EPA ECOTOX Knowledgebase",
+    "url": "https://www.epa.gov/comptox-tools/ecotoxicology-ecotox-knowledgebase-resource-hub",
+    "status": "planned expansion source; not yet used in computed results"
+  },
+  "comptox": {
+    "title": "EPA CompTox Chemicals Dashboard",
+    "url": "https://www.epa.gov/comptox-tools/comptox-chemicals-dashboard-resource-hub",
+    "status": "planned expansion source; not yet used in computed results"
+  }
+}

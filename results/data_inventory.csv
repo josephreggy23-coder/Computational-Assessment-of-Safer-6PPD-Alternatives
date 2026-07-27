@@ -1,0 +1,3 @@
+source,file,exists,checksum_valid,records,license,source_url
+USGS 2026,invivo_data.csv,True,True,1006,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
+USGS 2026,invitro_data.csv,True,True,6244,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
