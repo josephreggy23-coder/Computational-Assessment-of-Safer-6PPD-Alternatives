@@ -1,3 +1,5 @@
-source,file,exists,checksum_valid,records,license,source_url
-USGS 2026,invivo_data.csv,True,True,1006,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
-USGS 2026,invitro_data.csv,True,True,6244,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
+source,file,exists,checksum_valid,records,checksum_algorithm,expected_checksum,observed_checksum,checksum_origin,license,source_url
+USGS 2026,invivo_data.csv,True,True,1006.0,md5,bcffc127f53bffb32cb91f83b203c152,bcffc127f53bffb32cb91f83b203c152,published USGS MD5,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
+USGS 2026,invitro_data.csv,True,True,6244.0,md5,d25a1bef7229d2a18ac5af33ab7ffb21,d25a1bef7229d2a18ac5af33ab7ffb21,published USGS MD5,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
+USGS 2026,metadata.xml,True,True,,md5,3782097fca192ee32f24fbc806c75013,3782097fca192ee32f24fbc806c75013,published USGS MD5,CC0-1.0,https://doi.org/10.5066/P1DHCMMZ
+USGS 2026,usgs_2026_alternatives_final_report.pdf,True,True,,sha256,102f032f3722f8c06f1cf91cce319f69d2c7128c29d7d936de62d51d11acb933,102f032f3722f8c06f1cf91cce319f69d2c7128c29d7d936de62d51d11acb933,repository reference,Washington report: preserve attribution,https://doi.org/10.5066/P1DHCMMZ

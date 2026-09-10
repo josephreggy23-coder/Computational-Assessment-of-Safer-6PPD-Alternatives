@@ -1,29 +1,17 @@
-"""Measured-evidence summaries and decision-readiness analysis."""
+"""Measured evidence coverage and decision-readiness analysis."""
 
 from __future__ import annotations
 
 import pandas as pd
 
-
-def summarize_invivo_mortality(frame: pd.DataFrame) -> pd.DataFrame:
-    """Summarize observed mortality without fitting or imputing a model."""
-    fish = frame.loc[frame["fish_id"].notna()].copy()
-    fish["mortality"] = pd.to_numeric(fish["mortality"], errors="raise")
-    fish["nominal_conc"] = pd.to_numeric(fish["nominal_conc"], errors="raise")
-
-    summary = (
-        fish.groupby(
-            ["species", "exposure_chemical", "nominal_conc"], dropna=False
-        )
-        .agg(
-            fish_n=("fish_id", "count"),
-            deaths=("mortality", "sum"),
-            observed_mortality=("mortality", "mean"),
-        )
-        .reset_index()
-        .sort_values(["species", "exposure_chemical", "nominal_conc"])
-    )
-    return summary
+from .assay import normalize_cell_assay as normalize_cell_assay
+from .modeling import (
+    evaluate_grouped_cell_assay_model as evaluate_grouped_cell_assay_model,
+)
+from .toxicology import (
+    summarize_invivo_mortality as summarize_invivo_mortality,
+    build_orthogonal_endpoint_validation as build_orthogonal_endpoint_validation,
+)
 
 
 def build_evidence_matrix(
@@ -46,18 +34,17 @@ def build_evidence_matrix(
     matrix["has_product_invivo_data"] = matrix["usgs_product_label"].map(
         lambda value: pd.notna(value) and str(value) in invivo_labels
     )
-    matrix["has_discrete_identity"] = (
-        matrix["casrn"].notna()
-        & ~matrix["candidate_class"].isin(
-            {
-                "PPD_mixture",
-                "carbon_material",
-                "biopolymer",
-                "quinoline_polymer",
-                "phenol_mixture",
-                "proprietary",
-            }
-        )
+    matrix["has_discrete_identity"] = matrix["casrn"].notna() & ~matrix[
+        "candidate_class"
+    ].isin(
+        {
+            "PPD_mixture",
+            "carbon_material",
+            "biopolymer",
+            "quinoline_polymer",
+            "phenol_mixture",
+            "proprietary",
+        }
     )
 
     if pubchem is None or pubchem.empty:
@@ -65,8 +52,7 @@ def build_evidence_matrix(
     else:
         resolved = set(pubchem.loc[pubchem["resolved"], "casrn"].astype(str))
         matrix["has_pubchem_structure"] = (
-            matrix["casrn"].astype(str).isin(resolved)
-            & matrix["has_discrete_identity"]
+            matrix["casrn"].astype(str).isin(resolved) & matrix["has_discrete_identity"]
         )
 
     evidence_columns = [
@@ -118,8 +104,7 @@ def compare_published_cell_endpoints(endpoints: pd.DataFrame) -> pd.DataFrame:
         validate="many_to_one",
     )
     comparison["concentration_ratio_vs_6ppdq"] = (
-        comparison["effect_concentration_ug_l"]
-        / comparison["benchmark_6ppdq_ug_l"]
+        comparison["effect_concentration_ug_l"] / comparison["benchmark_6ppdq_ug_l"]
     )
     comparison["interpretation"] = comparison.apply(
         lambda row: (
@@ -182,6 +167,8 @@ def build_impact_brief(
     matrix: pd.DataFrame,
     mortality: pd.DataFrame,
     endpoint_comparison: pd.DataFrame,
+    assay_metrics: pd.DataFrame,
+    endpoint_validation: pd.DataFrame,
 ) -> str:
     official = matrix.loc[matrix["role"].eq("official_candidate")]
     organism_covered = int(official["has_product_invivo_data"].sum())
@@ -208,10 +195,17 @@ def build_impact_brief(
     ec20_finding = "; ".join(
         (
             f"{row.chemical} required {row.concentration_ratio_vs_6ppdq:.1f}x "
-            "the 6PPDQ concentration"
+            "the 6PPDQ concentration (published model estimate)"
         )
         for row in ec20.itertuples()
     )
+    primary_validation = endpoint_validation.loc[
+        endpoint_validation.effect_threshold.eq(0.2)
+    ]
+    validation_total = len(primary_validation)
+    validation_agree = int(primary_validation["directionally_concordant"].sum())
+    model = assay_metrics.loc[assay_metrics.model.eq("nested_selected")].iloc[0]
+    baseline = assay_metrics.loc[assay_metrics.model.eq("train_mean")].iloc[0]
 
     lines = [
         "# Impact brief",
@@ -263,6 +257,26 @@ def build_impact_brief(
         "system. Parent-only testing is insufficient: the USGS report found that "
         "ozonated mixtures could be more biologically active than purified quinones.",
         "",
+        "## Validation and model boundary",
+        "",
+        (
+            f"Across **{validation_total}** overlapping products, the observed cellular "
+            f"20% response call and 24-hour coho mortality call were concordant "
+            f"for **{validation_agree}**. This is an orthogonal endpoint check within "
+            "one release. IPPDQ is discordant at 20% and 30%; its published EC20 "
+            "lies beyond the cell test range and is excluded from observed calls. "
+            "The 10% threshold gives a different conclusion. No independent external replication exists."
+        ),
+        "",
+        (
+            "The nonlinear cell-assay model achieved grouped out-of-fold RMSE "
+            f"**{model['rmse']:.3f}** versus **{baseline['rmse']:.3f}** "
+            "for a training-fold mean baseline. Nested selection and shared-plate holdout "
+            "support only internal assay prediction. The "
+            "use of chemical identity means it is not a candidate-safety model and "
+            "does not produce candidate rankings."
+        ),
+        "",
         "## Interpretation boundary",
         "",
         "These results rank evidence needs, not chemical safety. A candidate with "
@@ -272,7 +286,8 @@ def build_impact_brief(
         "",
         (
             f"All {int(inventory['checksum_valid'].sum())} included USGS files "
-            "passed their published MD5 checksums. No synthetic observations or "
+            "passed the recorded integrity checks (published MD5 for data/metadata; "
+            "repository SHA-256 for the report). No synthetic observations or "
             "generated molecules were used."
         ),
         "",

@@ -43,8 +43,9 @@ Official USGS well-level cell-line measurements.
 | `timepoint` | Reported elapsed time |
 | `ozone_time` | Ozonation qualifier where applicable |
 
-RFU is not treated as toxicity without the control normalization and
-quality-control procedure defined by the source study.
+The reanalysis uses same-read solvent normalization, an explicitly documented
+alternative to the source metadata's six-hour reference, which is unavailable.
+Relative RFU is an assay response, not a calibrated mortality probability.
 
 ## `data/reference/candidate_registry.csv`
 
@@ -67,10 +68,32 @@ not a toxicity or safety ranking.
 
 Published CSE-119 EC5, EC10, and EC20 values with concentration ratios against
 6PPDQ for the same cell line and endpoint. A larger ratio means a higher
-concentration was required for the same measured cell effect; it does not prove
+concentration is estimated for the same modeled cell effect; it does not prove
 whole-organism or environmental safety.
 
 ## `results/decision_priorities.csv`
 
 One next decision-changing test for every candidate, selected from actual
 evidence coverage and identity status. No numeric safety score is used.
+
+## Version 0.2 derived outputs
+
+| File | Unit and interpretation |
+|---|---|
+| cell_assay_normalized.csv | One raw well; source_row points to CSV line including header; exact-read control mean, ozone, date, plate group, 24h eligibility and relative RFU. |
+| cell_assay_model_oof_predictions.csv | One nonzero dose mean per eligible read; technical_wells_n, outer_fold, domain flag and all model/baseline predictions. |
+| cell_assay_fold_audit.csv | One outer fold; JSON arrays of complete train/test plate groups, inner scores and selected models. |
+| cell_assay_model_metrics.csv | RMSE/MAE/R², signed residual, conditional plate-bootstrap 95% RMSE and paired gain intervals. Gain is baseline RMSE minus model RMSE. |
+| cell_assay_chemical_holdout_predictions.csv | Dose means predicted without their chemical or shared plates in training. |
+| cell_assay_chemical_holdout_metrics.csv | Errors per held-out chemical; tests transfer of an identity-based model. |
+| cell_assay_permutation_diagnostic.csv | Fixed-model dose-order null RMSE per shuffle and its unshuffled comparator. |
+| ozone_matched_dose_contrasts.csv | Matched chemical/cell/dose, means balanced across dates, t25 minus t0 relative RFU and date counts; no causal inference. |
+| invivo_tank_summary.csv | One tank, fish/deaths, nominal/measured µg/L, qualifier and measured/nominal ratio. |
+| fish_dose_response.csv | LC50 µg/L and tank-bootstrap interval for supported fits, basis, successful/attempted resamples and no-fit status. Blank means unestimated. |
+| fish_dose_response_curves.csv | Model predictions within the tested range; these are fitted curves, not new measurements. |
+| orthogonal_endpoint_validation.csv | One matched chemical per 10/20/30% threshold; separate observed calls, tested maxima, published EC20 and extrapolation flag. |
+| run_manifest.json | SHA-256 fingerprints of inputs, code and output artifacts; versions, seed and normalization/protocol identity. |
+
+The fish summary includes tank ranges and Wilson intervals under the explicitly
+stated independent-fish assumption. Candidate priorities also report recorded
+deaths in matched products and distinguish no recorded deaths from missing data.

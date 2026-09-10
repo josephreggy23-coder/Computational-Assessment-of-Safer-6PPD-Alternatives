@@ -1,0 +1,62 @@
+{
+  "code_sha256": {
+    "src/sixppd_assessment/__init__.py": "f34e207f958e678d87f3f461a28c017b1aba11dfcf0d186f293d77f78a8396bc",
+    "src/sixppd_assessment/__main__.py": "bb7f167d56a230823dd6c753b32013126868f4aa96423339afccaffd6ffbe2b5",
+    "src/sixppd_assessment/analysis.py": "edbd889fffcfff16e7156733b9ef1a84876169fbae41b92090798a8818127b4e",
+    "src/sixppd_assessment/assay.py": "b1fac3de9b93c1ca6ba800564513c49e158d8d5b1fa76d28839d36b32ca61649",
+    "src/sixppd_assessment/cli.py": "cd465c791789d95d3d7a52c1ac29aa9e22522cf10bb5b22aa2d17a936fc66e2b",
+    "src/sixppd_assessment/io.py": "8db62a42b3c2e1b4de75c2d18ff48f37a7700e71b1669ee148692c2789188374",
+    "src/sixppd_assessment/modeling.py": "4b7bbd1c7f78944c3cc17655a29cfb6177529394b65daacf7d65f75b8251f0b8",
+    "src/sixppd_assessment/pipeline.py": "98cdd24724ccd13e404b95c0a09f350b0d00027509ff65c4241ce6df307d7de6",
+    "src/sixppd_assessment/reporting.py": "d23353461259459d32912599052f66724c18beace54e3e4515243f787e6981b0",
+    "src/sixppd_assessment/toxicology.py": "377b99192a9ba79139eaf215bbdf9076728e759bf063d29271ebec056947b644"
+  },
+  "dependencies": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0"
+  },
+  "input_sha256": {
+    "config/sources.json": "4071a21326aa9eb4b34a4911c4ee7dcf952ca7708fa17adac2d4c187a478b9e4",
+    "data/processed/pubchem_identities.csv": "6e7f8bfaa20d39c7e0108a7ecaec0d32d9845747b87a8c13a47f6ede932c36ab",
+    "data/raw/usgs/invitro_data.csv": "7ef180a9e7d421621a9fc093b2222eff2505395467b8c59bd6994fac3e950726",
+    "data/raw/usgs/invivo_data.csv": "36717217ca569b0fdef6fc63dbffaceb618fcf499290f4135686c16313e692f1",
+    "data/raw/usgs/metadata.xml": "def10efd0837b10d5ba859b5ff393920cfd8cb46e4e69c335d67ee176c898537",
+    "data/raw/usgs/usgs_2026_alternatives_final_report.pdf": "102f032f3722f8c06f1cf91cce319f69d2c7128c29d7d936de62d51d11acb933",
+    "data/reference/candidate_registry.csv": "abf66eec239668bb5f20264cd65a487d5727c094c493120358cbb13ea547c69d",
+    "data/reference/usgs_report_endpoints.csv": "c016bd4a7cf27e95fa55892a2840a4a2304696593afc3b85ae4f5906bd241da3",
+    "docs/VALIDATION_PROTOCOL.md": "afe92fc291778339d27a975ab0b7500751d377cb4885861153e14db84008ecb1",
+    "pyproject.toml": "80fdfda2b6a7fa5b4a31dba85a437a421a90dd51c84c49c0ffc893ab709c8a66",
+    "requirements-tested.txt": "e6445168c26142aa25d9759a56556f77854cacc055f5db293f394cb2fb93ba0b"
+  },
+  "normalization": "same-read zero-dose solvent controls; six-hour reference absent",
+  "output_sha256": {
+    "results/cell_assay_chemical_holdout_metrics.csv": "11ae7381e25938e6b678548cc7752cc991929bca49a6ab797de968f9983c4905",
+    "results/cell_assay_chemical_holdout_predictions.csv": "6423f561df71ddb693054f817ef0148be0be97f700449801b21e7b9566427899",
+    "results/cell_assay_fold_audit.csv": "25449045a00f4332c688d9d819df367da194311ba757eccddee8e54d037c43f5",
+    "results/cell_assay_model_metrics.csv": "d98bba5bd13bb7032703b9a48077d4afa23cba0ce11465536f15243705c2a1b5",
+    "results/cell_assay_model_oof_predictions.csv": "0b6439f5f37c88fa8a84682a613575d284b10e7cc05e2e6973e36f367bed6961",
+    "results/cell_assay_normalized.csv": "98bd461a47d6f64db294c4ed4924e0101db6f53d6e3909b9e5de3734351f3051",
+    "results/cell_assay_permutation_diagnostic.csv": "25591061e35d1c245dd5381b5ab3c0ed6aa1be27553b8e4f1956475ed34ff536",
+    "results/cell_endpoint_comparison.csv": "b422cf4c1eb2e15cc84305a590a3012718721ca4099d050d55cfe3a17f55f922",
+    "results/data_inventory.csv": "34327bd0847fabfddb662edaffa950d55f72f1c97ecc23f3ecf5775a55b3a097",
+    "results/decision_priorities.csv": "2ab994f9423467b5f07821ca1c4dfd5c61a8a9ec1a895598fbdfdf79437c134e",
+    "results/evidence_matrix.csv": "6303b6a316177cd15942a14f0757cdf378a0a7767a1f51b4aeae1b3f5abcbf1d",
+    "results/fish_dose_response.csv": "ce1c92f28cb51cd8e34dc024fbb8145f96a473a1f6baf0bd34de209507cfa7a3",
+    "results/fish_dose_response_curves.csv": "d10af706b4b46a1fe0098af444f99104773a0c2d652a194e7534e5817d535489",
+    "results/impact_brief.md": "69a6da6365127c8d220a0c95a423c54ded192a7fbc2b10c860f44f24501dc312",
+    "results/invivo_mortality_summary.csv": "2a0a434fa1794e576efa97c6d5f56e0de1f44accaf94c17b805c531501c8fbb5",
+    "results/invivo_tank_summary.csv": "450a93271f1bb35553518df6dd0d6dff8fa3d9b310de01299f809fce188c47f6",
+    "results/orthogonal_endpoint_validation.csv": "85f7ce329e1921daa406ae5f09f676c19a73dce1791e2544df3fba525c7c47f9",
+    "results/ozone_matched_dose_contrasts.csv": "c3cfb8362bf3ed18261efaaf127e67da1878b4ced0feb97d58da459523223b78",
+    "results/validation_overview.png": "137541b6ba2bd33b486282344b33bf9f7a134e12100ff02019315d5d1fa7d0de"
+  },
+  "permutations": 19,
+  "protocol": "docs/VALIDATION_PROTOCOL.md",
+  "python": "3.14.4",
+  "schema_version": 1,
+  "scope": "retrospective internal reanalysis; not independent external validation",
+  "seed": 20260909
+}

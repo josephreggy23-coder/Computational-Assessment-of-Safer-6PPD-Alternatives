@@ -1,0 +1,29 @@
+name: Test public-data analysis
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements-tested.txt -e ".[dev]"
+      - run: python -m sixppd_assessment run
+      - run: python -m sixppd_assessment verify
+      - run: pytest
+      - run: ruff check src tests
+      - run: ruff format --check src tests
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-analysis
+          path: results/

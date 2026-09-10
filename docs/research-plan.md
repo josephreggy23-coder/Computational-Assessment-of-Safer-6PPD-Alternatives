@@ -1,5 +1,12 @@
 # Research plan
 
+Version 0.2 status: evidence mapping, retrospective cell modeling, tank-level
+dose response and orthogonal endpoint triangulation are implemented. The
+[validation protocol](VALIDATION_PROTOCOL.md) records their exact scope.
+Environmental fate, quantum descriptors and independent external validation
+remain planned. The mechanistic hypothesis below is not established by these
+data; neither electrophilicity nor transformation yield has been measured here.
+
 ## Question
 
 Which publicly identified 6PPD alternatives should receive priority for
@@ -51,8 +58,9 @@ support it.
 
 - Use one regularized and interpretable model.
 - Train only on harmonized, measured organism-level endpoints.
-- Reserve the 2026 USGS data for external evaluation when endpoint comparability
-  permits.
+- Reserve new, independently sourced studies for external evaluation before
+  further feature selection. The inspected 2026 USGS release can no longer
+  serve as an untouched external test set.
 - Report coefficients, grouped cross-validation, bootstrap intervals,
   applicability domain, and a median-only baseline.
 
@@ -80,4 +88,3 @@ measured toxicity.
 - **Not assessable:** identity or evidence is too incomplete for a conclusion.
 
 These are evidence-readiness tiers, not declarations of safety.
-

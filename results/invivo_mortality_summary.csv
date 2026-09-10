@@ -1,40 +1,40 @@
-species,exposure_chemical,nominal_conc,fish_n,deaths,observed_mortality
-coho,CCPDQ,0.0,24,0,0.0
-coho,CCPDQ,0.5,24,0,0.0
-coho,CCPDQ,2.0,24,0,0.0
-coho,CCPDQ,10.0,48,0,0.0
-coho,CCPDQ,25.0,24,0,0.0
-coho,CCPDQ,50.0,24,0,0.0
-coho,CPPDQ,0.0,24,0,0.0
-coho,CPPDQ,0.5,24,0,0.0
-coho,CPPDQ,2.0,24,0,0.0
-coho,CPPDQ,8.0,24,0,0.0
-coho,CPPDQ,10.0,24,2,0.08333333333333333
-coho,CPPDQ,14.0,24,0,0.0
-coho,CPPDQ,20.0,22,7,0.3181818181818182
-coho,DPPDQ,0.0,24,0,0.0
-coho,DPPDQ,0.5,24,0,0.0
-coho,DPPDQ,2.0,24,0,0.0
-coho,DPPDQ,10.0,24,0,0.0
-coho,HPPDQ,0.0,24,0,0.0
-coho,HPPDQ,0.5,48,0,0.0
-coho,HPPDQ,2.0,48,0,0.0
-coho,HPPDQ,4.0,24,0,0.0
-coho,HPPDQ,10.0,24,0,0.0
-coho,IPPDQ,0.0,24,0,0.0
-coho,IPPDQ,0.1,24,0,0.0
-coho,IPPDQ,0.3,24,0,0.0
-coho,IPPDQ,0.4,24,0,0.0
-coho,IPPDQ,0.5,24,3,0.125
-coho,IPPDQ,0.65,24,9,0.375
-coho,IPPDQ,0.75,24,11,0.4583333333333333
-coho,IPPDQ,0.9,24,12,0.5
-coho,IPPDQ,1.0,24,13,0.5416666666666666
-coho,IPPDQ,1.15,24,19,0.7916666666666666
-coho,IPPDQ,1.4,24,18,0.75
-coho,IPPDQ,1.5,24,22,0.9166666666666666
-coho,IPPDQ,2.0,24,22,0.9166666666666666
-coho,OPPDQ,0.0,24,0,0.0
-coho,OPPDQ,0.5,24,0,0.0
-coho,OPPDQ,2.0,24,0,0.0
-coho,OPPDQ,10.0,24,0,0.0
+species,exposure_chemical,nominal_conc,fish_n,deaths,tanks_n,exposure_runs_n,min_tank_mortality,max_tank_mortality,measured_tanks_n,measured_min_ug_l,measured_max_ug_l,observed_mortality,fish_binomial_ci_low,fish_binomial_ci_high,interval_note
+coho,CCPDQ,0.0,24,0,3,1,0.0,0.0,2,0.0,0.0,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CCPDQ,0.5,24,0,3,1,0.0,0.0,3,1.115,1.603,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CCPDQ,2.0,24,0,3,1,0.0,0.0,3,22.461,24.214,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CCPDQ,10.0,48,0,6,2,0.0,0.0,6,134.004,222.87,0.0,6.938893903907228e-18,0.07410012966611748,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CCPDQ,25.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CCPDQ,50.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,0.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,0.5,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,2.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,8.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,10.0,24,2,3,1,0.0,0.25,3,2.449,14.948,0.08333333333333333,0.023158815297043306,0.25848802193210685,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,14.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,CPPDQ,20.0,22,7,3,1,0.0,0.5,0,,,0.3181818181818182,0.1636059318135624,0.5268140225895723,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,DPPDQ,0.0,24,0,3,1,0.0,0.0,3,0.0,0.0,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,DPPDQ,0.5,24,0,3,1,0.0,0.0,1,0.0,0.0,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,DPPDQ,2.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,DPPDQ,10.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,HPPDQ,0.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,HPPDQ,0.5,48,0,6,2,0.0,0.0,0,,,0.0,6.938893903907228e-18,0.07410012966611748,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,HPPDQ,2.0,48,0,6,2,0.0,0.0,0,,,0.0,6.938893903907228e-18,0.07410012966611748,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,HPPDQ,4.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,HPPDQ,10.0,24,0,3,1,0.0,0.0,3,18.372,44.833,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.0,24,0,3,1,0.0,0.0,2,0.0,0.0,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.1,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.3,24,0,3,1,0.0,0.0,2,0.437,0.494,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.4,24,0,3,1,0.0,0.0,2,0.383,0.456,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.5,24,3,3,1,0.125,0.125,3,0.457,0.61,0.125,0.04344334080123444,0.31003881270500067,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.65,24,9,3,1,0.25,0.5,2,0.591,0.639,0.375,0.21159367559548778,0.5729003755732572,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.75,24,11,3,1,0.125,0.625,2,0.661,0.809,0.4583333333333333,0.2789133373121099,0.6492513464108051,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,0.9,24,12,3,1,0.375,0.625,2,0.67,0.764,0.5,0.3142742581957335,0.6857257418042665,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,1.0,24,13,3,1,0.375,0.75,2,0.964,1.06,0.5416666666666666,0.3507486535891948,0.72108666268789,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,1.15,24,19,3,1,0.625,1.0,2,0.895,0.916,0.7916666666666666,0.5952954674681133,0.9075517464714814,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,1.4,24,18,3,1,0.625,0.875,2,1.086,1.222,0.75,0.55100555994846,0.8800063377140499,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,1.5,24,22,3,1,0.875,1.0,2,1.304,1.388,0.9166666666666666,0.741511978067893,0.9768411847029567,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,IPPDQ,2.0,24,22,3,1,0.875,1.0,0,,,0.9166666666666666,0.741511978067893,0.9768411847029567,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,OPPDQ,0.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,OPPDQ,0.5,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,OPPDQ,2.0,24,0,3,1,0.0,0.0,0,,,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
+coho,OPPDQ,10.0,24,0,3,1,0.0,0.0,3,23.987,274.486,0.0,1.3877787807814457e-17,0.13797620467498017,Wilson 95% under independent fish assumption; shared tanks can widen uncertainty
