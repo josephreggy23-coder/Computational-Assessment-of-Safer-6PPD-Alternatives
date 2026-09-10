@@ -12,7 +12,7 @@ reanalysis of public experimental data · **Manuscript status:** unpublished dra
 This README is both the project overview and a self-contained briefing for
 Claude or another report writer. It explains the scientific question, data,
 implemented methods, verified results, interpretation boundaries, and the
-files supporting each claim. A ready-to-use report prompt appears near the end.
+files supporting each claim.
 
 [Paper draft](docs/PAPER_DRAFT.md) ·
 [Validation protocol](docs/VALIDATION_PROTOCOL.md) ·
@@ -572,91 +572,7 @@ group separation, baseline construction, extrapolation handling, tank
 accounting, LC50 support gates, ozone matching and receipt integrity.
 CI uploads generated results as an artifact.
 
-## 11. Brief for Claude: generate a comprehensive report
-
-Copy the following prompt into Claude with this repository or README.
-If file access is available, provide the repository or upload the linked
-protocol, model card, key result CSVs, figure and provenance documents.
-
-~~~text
-Write a comprehensive scientific report for:
-
-TREADSENTINEL: Cross-Endpoint Toxicity Assessment and Evidence-Gated
-Screening of 6PPD Alternatives
-
-Use this repository's README as the briefing. If repository files are
-accessible, read VALIDATION_PROTOCOL.md, MODEL_CARD.md, the relevant result
-CSVs, data-provenance.md, and the original metadata before using PAPER_DRAFT.md
-as narrative material. State which materials you actually accessed.
-If only this README is available, use its embedded results and clearly
-state that the linked files were not independently inspected.
-
-Audience: an interdisciplinary environmental toxicology and computational
-science reader. Write clear, publication-style prose with enough detail for
-methods and results to be assessed. Target approximately 3,000–4,000 words
-unless another length is requested.
-
-Include:
-1. Title, author attribution as provided, abstract and keywords.
-2. Introduction: substitution problem, precise research question, and the
-   distinction between hazard evidence, assay prediction and replacement safety.
-3. Data and provenance: sources, licenses, dates, sample units, chemical
-   coverage, identities and missingness.
-4. Methods: exact-read control normalization and its deviation from the
-   unavailable six-hour reference; 24-hour eligibility; technical-well
-   aggregation; nested grouped modeling; baselines; conditional plate
-   uncertainty; chemical holdout; dose permutations; tank-level LC50 models;
-   measured-dose sensitivity; observed-only endpoint thresholds; and
-   descriptive, batch-confounded ozone contrasts.
-5. Results: coverage, all model comparators, uncertainty, supported LC50s,
-   threshold-specific agreement, transfer failures and limitations of
-   the diagnostic permutations. Include denominators and concentration units.
-6. A table of principal numerical findings and Figure 1 with an accurate
-   caption. If the figure cannot be accessed, provide its proposed caption
-   and identify the file; do not invent a replacement figure.
-7. Discussion: scientific interpretation, alternative explanations, what
-   the project contributes, what it cannot establish, and prioritized
-   independent validation and performance/exposure work.
-8. Conclusion, reproducibility/data/code statement, AI-use disclosure
-   consistent with the draft, and source-linked references.
-
-Evidence rules:
-- Attribute original experiments to the USGS authors and distinguish them
-  from this project's computational reanalysis.
-- Separate measured responses, published fitted EC estimates, new model
-  predictions, statistical resamples and future hypotheses.
-- Describe all current analyses as retrospective; no preregistration or
-  independent external validation has occurred.
-- Do not count extrapolated EC20s as observed effects. At 20% and 30%, observed
-  agreement is 2/3; at 10% it is 3/3. Discuss the near-threshold IPPDQ result.
-- Report the nonlinear model as within-assay prediction, not a molecular
-  QSAR, a fish-survival model, or a candidate safety ranking.
-- Explain that the identical Extra Trees and nested-selected rows arise
-  from the same selected predictions, not independent confirmation.
-- Do not convert R² into percent accuracy, 42% lower RMSE into a safety
-  improvement, or a missing LC50 into an infinite/safe value.
-- Preserve distinctions between nominal and measured doses and their
-  different sample sets, and between fish-binomial and tank-bootstrap intervals.
-- Do not claim the seven identity-limited candidates all share the same
-  reason for exclusion or confuse pure DPPD with the commercial DTPD/DPPD mixture.
-- Do not invent experiments, quantum descriptors, tire-performance tests,
-  environmental exposure estimates, p-values, causal findings or citations.
-- Keep the subjective repository rubric score out of scientific Results.
-- Cite local result files for reanalysis numbers and original source records
-  for experimental provenance. If adding outside literature is requested,
-  verify it separately and clearly distinguish it from data analyzed here.
-- Flag unresolved discrepancies or inaccessible materials explicitly.
-
-Finish with a short list of evidence still needed before this could support
-an independently validated safer-substitution claim.
-~~~
-
-Suggested report tables are: data/sample inventory; candidate evidence
-coverage; nested model performance and uncertainty; IPPDQ nominal/measured
-LC50 comparison; and threshold-specific cell/fish agreement.
-Avoid duplicating every raw CSV row in the main report.
-
-## 12. Next evidence milestones
+## 11. Next evidence milestones
 
 The next substantial scientific gains require:
 
@@ -674,7 +590,7 @@ The [modeling plan](docs/modeling-plan.md) specifies project entry gates of
 requirements, not universal regulatory thresholds or a statistical power
 guarantee. More algorithms cannot resolve absent biological evidence.
 
-## 13. Glossary
+## 12. Glossary
 
 | Term | Meaning in this repository |
 |---|---|
@@ -690,7 +606,7 @@ guarantee. More algorithms cannot resolve absent biological evidence.
 | LOD / E | Limit-of-detection qualifier / laboratory estimated-concentration flag |
 | Evidence readiness | Availability and identity criteria for deciding the next test, not a safety score |
 
-## 14. References and citation
+## 13. References and citation
 
 1. Greer JB, Dalsky EM, Bachand PT, Hansen JD. 2026.
    *Toxicity of 6PPD alternatives to salmonids*. USGS data release.
