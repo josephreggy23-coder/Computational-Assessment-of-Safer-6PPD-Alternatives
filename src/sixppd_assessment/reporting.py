@@ -4,6 +4,7 @@ import hashlib
 import importlib.metadata
 import json
 import platform
+
 import matplotlib
 
 matplotlib.use("Agg")

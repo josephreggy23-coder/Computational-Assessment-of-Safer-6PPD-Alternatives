@@ -4,14 +4,23 @@ from __future__ import annotations
 
 import pandas as pd
 
-from .assay import normalize_cell_assay as normalize_cell_assay
-from .modeling import (
-    evaluate_grouped_cell_assay_model as evaluate_grouped_cell_assay_model,
-)
+from .assay import normalize_cell_assay
+from .modeling import evaluate_grouped_cell_assay_model
 from .toxicology import (
-    summarize_invivo_mortality as summarize_invivo_mortality,
-    build_orthogonal_endpoint_validation as build_orthogonal_endpoint_validation,
+    build_orthogonal_endpoint_validation,
+    summarize_invivo_mortality,
 )
+
+__all__ = [
+    "normalize_cell_assay",
+    "evaluate_grouped_cell_assay_model",
+    "summarize_invivo_mortality",
+    "build_orthogonal_endpoint_validation",
+    "build_evidence_matrix",
+    "build_decision_priorities",
+    "build_impact_brief",
+    "compare_published_cell_endpoints",
+]
 
 
 def build_evidence_matrix(
@@ -239,8 +248,10 @@ def build_impact_brief(
             "deaths** across the tested concentrations."
         ),
         "",
-        "The cell-line and whole-fish evidence are kept separate because they are "
-        "not interchangeable endpoints.",
+        (
+            "The cell-line and whole-fish evidence are kept separate because they are "
+            "not interchangeable endpoints."
+        ),
         "",
         "## Measured benchmark comparison",
         "",
@@ -252,10 +263,12 @@ def build_impact_brief(
         "",
         "## Highest-impact next experiment",
         "",
-        "For each candidate with a defined identity, identify its actual ozonation "
-        "products and test the complete product mixture in a sensitive salmonid "
-        "system. Parent-only testing is insufficient: the USGS report found that "
-        "ozonated mixtures could be more biologically active than purified quinones.",
+        (
+            "For each candidate with a defined identity, identify its actual ozonation "
+            "products and test the complete product mixture in a sensitive salmonid "
+            "system. Parent-only testing is insufficient: the USGS report found that "
+            "ozonated mixtures could be more biologically active than purified quinones."
+        ),
         "",
         "## Validation and model boundary",
         "",
@@ -279,8 +292,10 @@ def build_impact_brief(
         "",
         "## Interpretation boundary",
         "",
-        "These results rank evidence needs, not chemical safety. A candidate with "
-        "little data remains unranked; it is not treated as low risk.",
+        (
+            "These results rank evidence needs, not chemical safety. A candidate with "
+            "little data remains unranked; it is not treated as low risk."
+        ),
         "",
         "## Integrity",
         "",

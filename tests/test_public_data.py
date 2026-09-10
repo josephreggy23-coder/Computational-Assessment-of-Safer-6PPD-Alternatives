@@ -3,9 +3,9 @@ from pathlib import Path
 import pandas as pd
 
 from sixppd_assessment.analysis import (
-    build_orthogonal_endpoint_validation,
     build_decision_priorities,
     build_evidence_matrix,
+    build_orthogonal_endpoint_validation,
     compare_published_cell_endpoints,
     summarize_invivo_mortality,
 )
@@ -14,7 +14,6 @@ from sixppd_assessment.io import (
     load_sources,
     verify_usgs_files,
 )
-
 
 ROOT = Path(__file__).resolve().parents[1]
 
