@@ -12,3 +12,6 @@ data/cache/
 .DS_Store
 .idea/
 .vscode/
+.mypy_cache/
+.coverage
+htmlcov/
