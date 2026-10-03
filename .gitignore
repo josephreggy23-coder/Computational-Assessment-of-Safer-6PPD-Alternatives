@@ -9,3 +9,6 @@ build/
 tmp/
 data/cache/
 
+.DS_Store
+.idea/
+.vscode/
