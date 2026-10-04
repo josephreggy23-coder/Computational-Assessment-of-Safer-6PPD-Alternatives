@@ -19,3 +19,5 @@ htmlcov/
 venv/
 env/
 .ipynb_checkpoints/
+Thumbs.db
+desktop.ini
