@@ -535,7 +535,8 @@ package version installs on Python 3.11.
 
 ~~~bash
 python -m venv .venv
-# Activate .venv using the command appropriate for your shell.
+# Activate .venv: `source .venv/bin/activate` (macOS/Linux)
+# or `.\.venv\Scripts\Activate.ps1` (Windows PowerShell).
 python -m pip install -r requirements-tested.txt -e ".[dev]"
 python -m sixppd_assessment run
 python -m sixppd_assessment verify
