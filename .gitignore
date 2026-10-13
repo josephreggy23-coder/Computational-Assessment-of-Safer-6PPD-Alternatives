@@ -13,3 +13,11 @@ venv/
 htmlcov/
 .DS_Store
 Thumbs.db
+
+# Tool caches
+.ruff_cache/
+.mypy_cache/
+
+# Editor
+.idea/
+.vscode/
