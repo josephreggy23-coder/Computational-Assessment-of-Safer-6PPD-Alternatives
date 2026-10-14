@@ -541,8 +541,8 @@ python -m pip install -r requirements-tested.txt -e ".[dev]"
 python -m sixppd_assessment run
 python -m sixppd_assessment verify
 python -m pytest
-ruff check .
-ruff format --check src tests
+python -m ruff check .
+python -m ruff format --check src tests
 ~~~
 
 For report-only reading, the committed CSVs and figure can be used without
