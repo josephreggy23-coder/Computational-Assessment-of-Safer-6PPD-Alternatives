@@ -21,3 +21,7 @@ Thumbs.db
 # Editor
 .idea/
 .vscode/
+
+# Notebooks / local env
+.ipynb_checkpoints/
+.env
