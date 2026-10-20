@@ -546,11 +546,11 @@ python -m ruff format --check src tests
 ~~~
 
 For report-only reading, the committed CSVs and figure can be used without
-retraining. The verify command checks the saved input/code/output fingerprints;
+retraining. The `verify` command checks the saved input/code/output fingerprints;
 it does not independently validate the scientific claims or certify identical
 results under every environment.
 
-The run command rewrites derived files in results/ and creates a new receipt.
+The `run` command rewrites derived files in `results/` and creates a new receipt.
 Copy or preserve an existing result snapshot before comparing runs.
 The default has 19 dose-order permutations. Use:
 
@@ -558,7 +558,7 @@ The default has 19 dose-order permutations. Use:
 python -m sixppd_assessment run --permutations 99
 ~~~
 
-for a finer exploratory diagnostic, or --permutations 0 for a development run
+for a finer exploratory diagnostic, or `--permutations 0` for a development run
 that skips that diagnostic. Report the actual number from the relevant
 receipt; a changed run is not the same snapshot as the tables above.
 
