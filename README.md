@@ -515,6 +515,8 @@ For a full report, read the following in order:
 | [reporting.py](src/sixppd_assessment/reporting.py) | Figure, receipt generation and receipt verification |
 | [pipeline.py](src/sixppd_assessment/pipeline.py) | End-to-end orchestration |
 | [cli.py](src/sixppd_assessment/cli.py) | Run/verify commands |
+| [`__main__.py`](src/sixppd_assessment/__main__.py) | `python -m sixppd_assessment` entry point |
+| [download_public_data.py](scripts/download_public_data.py) | Optional refresh of public source assets and PubChem identities |
 
 **If sources disagree:** distinguish a rounding difference from a different
 snapshot or endpoint definition. Check the receipt, original source definition,
