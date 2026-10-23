@@ -25,3 +25,7 @@ Thumbs.db
 # Notebooks / local env
 .ipynb_checkpoints/
 .env
+
+# Logs / coverage reports
+*.log
+coverage.xml
