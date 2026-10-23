@@ -131,7 +131,7 @@ EPA ECOTOX and CompTox remain planned expansion sources.
 
 ### Integrity and attribution
 
-The USGS data release is CC0; repository software is MIT licensed.
+The USGS data release is CC0; repository software is MIT licensed (see [LICENSE](LICENSE)).
 Preserve attribution for the Washington report, DTSC page and PubChem records.
 Source URLs and expected checksums are in [config/sources.json](config/sources.json).
 
