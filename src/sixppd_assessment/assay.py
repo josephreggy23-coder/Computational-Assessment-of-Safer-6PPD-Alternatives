@@ -5,12 +5,14 @@ import pandas as pd
 
 
 def require_columns(frame, columns):
+    """Raise ``ValueError`` if any of ``columns`` is missing from ``frame``."""
     missing = set(columns) - set(frame.columns)
     if missing:
         raise ValueError(f"Missing columns: {sorted(missing)}")
 
 
 def nonnegative_numeric(frame, columns):
+    """Coerce ``columns`` to numbers in place; raise if any value is negative or non-finite."""
     for col in columns:
         frame[col] = pd.to_numeric(frame[col], errors="raise")
         if not np.isfinite(frame[col]).all() or frame[col].lt(0).any():
