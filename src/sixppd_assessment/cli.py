@@ -14,7 +14,11 @@ def build_parser() -> argparse.ArgumentParser:
         prog="sixppd-assessment",
         description="Analyze public evidence for safer 6PPD alternatives.",
     )
-    parser.add_argument("command", choices=["run", "verify"])
+    parser.add_argument(
+        "command",
+        choices=["run", "verify"],
+        help="run: rebuild the analysis outputs; verify: check inputs and outputs against the manifest",
+    )
     parser.add_argument(
         "--permutations",
         type=int,
