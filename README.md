@@ -550,7 +550,10 @@ python -m ruff format --check src tests
 For report-only reading, the committed CSVs and figure can be used without
 retraining. The `verify` command checks the saved input/code/output fingerprints;
 it does not independently validate the scientific claims or certify identical
-results under every environment.
+results under every environment. Fingerprinted files include the package
+source in `src/`, `pyproject.toml`, `requirements-tested.txt` and
+`docs/VALIDATION_PROTOCOL.md`, so editing any of them requires a fresh `run`
+before `verify` will pass.
 
 The `run` command rewrites derived files in `results/` and creates a new receipt.
 Copy or preserve an existing result snapshot before comparing runs.
