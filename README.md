@@ -527,7 +527,8 @@ source of truth.
 
 ## 10. Reproducing or verifying the analysis
 
-Run commands from the repository root. All required scientific source files
+Run commands from the repository root, or pass `--root PATH` to point `run`
+or `verify` at a checkout elsewhere. All required scientific source files
 are included; no download is needed to analyze the committed snapshot.
 
 Use **Python 3.14** with the pinned tested environment. The package declares
