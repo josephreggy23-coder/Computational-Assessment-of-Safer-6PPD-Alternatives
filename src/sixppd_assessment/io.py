@@ -10,6 +10,7 @@ import pandas as pd
 
 
 def md5sum(path: Path) -> str:
+    """Return the hex MD5 digest of a file, read in 1 MiB blocks."""
     digest = hashlib.md5(usedforsecurity=False)
     with path.open("rb") as stream:
         for block in iter(lambda: stream.read(1024 * 1024), b""):
@@ -18,11 +19,13 @@ def md5sum(path: Path) -> str:
 
 
 def load_sources(path: Path) -> dict:
+    """Load the JSON source registry (e.g. config/sources.json)."""
     with path.open(encoding="utf-8") as stream:
         return json.load(stream)
 
 
 def verify_usgs_files(root: Path, sources: dict) -> list[dict[str, object]]:
+    """Verify USGS file checksums and return one inventory row per file."""
     inventory: list[dict[str, object]] = []
     entries = dict(sources["usgs_2026"]["files"])
     for name in ["metadata", "report"]:
@@ -63,6 +66,7 @@ def verify_usgs_files(root: Path, sources: dict) -> list[dict[str, object]]:
 
 
 def load_candidate_registry(path: Path) -> pd.DataFrame:
+    """Load the candidate registry CSV and check its required columns."""
     frame = pd.read_csv(path, dtype={"casrn": "string"})
     required = {
         "candidate_id",
