@@ -10,6 +10,7 @@ from .reporting import verify_manifest
 
 
 def build_parser() -> argparse.ArgumentParser:
+    """Build the command-line parser for the run and verify commands."""
     parser = argparse.ArgumentParser(
         prog="sixppd-assessment",
         description="Analyze public evidence for safer 6PPD alternatives.",
@@ -35,6 +36,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
+    """Command-line entry point: rebuild or verify the analysis outputs."""
     args = build_parser().parse_args()
     if args.permutations < 0:
         raise SystemExit("--permutations must be nonnegative")
