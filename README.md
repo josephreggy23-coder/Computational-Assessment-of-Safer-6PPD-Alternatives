@@ -482,6 +482,7 @@ For a full report, read the following in order:
    and [metadata.xml](data/raw/usgs/metadata.xml) for source and field definitions.
 6. Relevant source modules if an implementation detail needs verification.
 7. [PAPER_DRAFT.md](docs/PAPER_DRAFT.md) as editable narrative material, not independent evidence.
+8. [impact-framework.md](docs/impact-framework.md) for how results are intended to inform decisions.
 
 ### Claim-to-file map
 
