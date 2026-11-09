@@ -1,3 +1,5 @@
+"""Regression checks on the committed public USGS data and derived evidence tables."""
+
 from pathlib import Path
 
 import pandas as pd
