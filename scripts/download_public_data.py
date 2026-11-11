@@ -39,6 +39,7 @@ def sha256sum(path: Path) -> str:
 
 
 def download_usgs(sources: dict) -> None:
+    """Download the USGS 2026 files that are missing or fail their checksum."""
     destination_dir = ROOT / "data" / "raw" / "usgs"
     for filename, metadata in sources["usgs_2026"]["files"].items():
         destination = destination_dir / filename
@@ -75,6 +76,7 @@ def download_usgs(sources: dict) -> None:
 
 
 def pubchem_identity(casrn: str, api_base: str) -> dict[str, object]:
+    """Look up PubChem identifiers and structure fields for one CAS number."""
     encoded = urllib.parse.quote(casrn, safe="")
     properties = (
         "Title,MolecularFormula,MolecularWeight,CanonicalSMILES,"
@@ -122,6 +124,7 @@ def pubchem_identity(casrn: str, api_base: str) -> dict[str, object]:
 
 
 def download_pubchem(sources: dict) -> None:
+    """Resolve every registry CAS number via PubChem and write pubchem_identities.csv."""
     registry = ROOT / "data" / "reference" / "candidate_registry.csv"
     with registry.open(newline="", encoding="utf-8") as stream:
         casrns = [
@@ -145,6 +148,7 @@ def download_pubchem(sources: dict) -> None:
 
 
 def main() -> None:
+    """Refresh all public source data listed in config/sources.json."""
     with (ROOT / "config" / "sources.json").open(encoding="utf-8") as stream:
         sources = json.load(stream)
     download_usgs(sources)
