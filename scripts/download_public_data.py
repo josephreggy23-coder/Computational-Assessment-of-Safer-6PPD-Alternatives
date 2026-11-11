@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def download(url: str, destination: Path) -> None:
+    """Fetch url and write the response body to destination."""
     destination.parent.mkdir(parents=True, exist_ok=True)
     request = urllib.request.Request(
         url, headers={"User-Agent": "6PPD-public-data-research/0.1"}
@@ -24,12 +25,14 @@ def download(url: str, destination: Path) -> None:
 
 
 def md5sum(path: Path) -> str:
+    """Return the hex MD5 of a file (used only to match published checksums)."""
     digest = hashlib.md5(usedforsecurity=False)
     digest.update(path.read_bytes())
     return digest.hexdigest()
 
 
 def sha256sum(path: Path) -> str:
+    """Return the hex SHA-256 of a file."""
     digest = hashlib.sha256()
     digest.update(path.read_bytes())
     return digest.hexdigest()
